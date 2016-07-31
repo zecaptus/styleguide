@@ -1,0 +1,42 @@
+.header {
+    background-color: #6363AD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header h1 {
+    color: #FFF;
+    flex: 1;
+    border: none;
+}
+
+.header h1 a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+.githubLink {
+    height: 24px;
+    padding: 10px;
+}
+
+.githubLink img {
+    height: 24px;
+}
+
+.sidebar {
+    top: 52px;
+    bottom: 25px;
+}
+
+.footer {
+    background-color: #6363AD;
+    position: fixed;
+    bottom: 0;
+    color: #FFF;
+    display: block;
+    width: calc(100% - 10px);
+    padding: 5px;
+    text-align: center;
+}

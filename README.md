@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Whataboon/ComponentsLibrary.svg?style=shield&circle-token=8feb2694fd39149d1bbcad7181ae9ff902e7e314)](https://circleci.com/gh/Whataboon/ComponentsLibrary)
+
 # ComponentsLibrary
 All new react component we have to use for Whataboon
 

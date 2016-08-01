@@ -12,12 +12,14 @@ module.exports = {
         }}
     ],
     showCode: true,
+    template: 'config/styleguide/template.html',
     updateWebpackConfig: function(webpackConfig, env) {
         // Your source files folder or array of folders, should not include node_modules
         var dir = path.join(__dirname, 'src');
         var config = path.join(__dirname, 'config/styleguide');
 
         webpackConfig.resolve.alias['rsg-components/Layout'] = path.join(config, 'Layout');
+        webpackConfig.resolve.alias['rsg-components/Wrapper'] = path.join(config, 'Wrapper');
 
         webpackConfig.module.loaders.push(
             // Babel loader will use your project’s .babelrc

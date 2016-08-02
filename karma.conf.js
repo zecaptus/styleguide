@@ -19,7 +19,7 @@ module.exports = function(config) {
         extensions : ['', '.js', '.jsx', '.coffee', '.json']
       },
       module: {
-        loaders: [
+        preLoaders: [
           {
             test: /\.jsx?$/,
             loader: 'babel',
@@ -28,6 +28,12 @@ module.exports = function(config) {
               presets: ["es2015", "react", "stage-0"]
             }
           },
+          {
+            test: /\.jsx?$/,
+            loader: 'isparta',
+            exclude: path.resolve(__dirname, 'node_modules') }
+        ],
+        loaders: [
           {
             test: /\.json$/,
             loader: 'json'
@@ -52,16 +58,32 @@ module.exports = function(config) {
       'karma-sourcemap-loader',
       'karma-chrome-launcher',
       'karma-phantomjs-launcher',
-      'karma-mocha-reporter'
+      'karma-mocha-reporter',
+      'karma-coverage'
     ],
 
+    coverageReporter: {
+      reporters: [
+        {
+          type: 'text-summary'
+        },
+        {
+          type: 'html',
+          dir: 'coverage'
+        },
+        {
+          type: 'lcov',
+          subdir: 'report-lcov'
+        }
+      ]
+    },
 
     babelPreprocessor: {
       options: {
         presets: ["es2015", "react", "stage-0"]
       }
     },
-    reporters: ['mocha'],
+    reporters: ['mocha', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

@@ -6,11 +6,11 @@ class Checkbox extends Component {
         label: PropTypes.string,
         checkedIcon: PropTypes.element,
         uncheckedIcon: PropTypes.element,
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
     };
 
     static defaultProps = {
-        disabled: false
+        disabled: false,
     };
 
     componentDidMount() {
@@ -18,7 +18,7 @@ class Checkbox extends Component {
     }
 
     render() {
-        const {...props} = this.props;
+        const { ...props } = this.props;
 
         return <MuiCheckbox {...props} />;
     }

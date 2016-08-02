@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "root": true,
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "browser": true
+  },
+  "globals": {
+    "sinon": true,
+    "chai": true,
+    "expect": true
+  },
+  "rules": {
+    "indent" : ["error", 4],
+    "comma-dangle" : ["error", "always-multiline"]
+  }
+}

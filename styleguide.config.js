@@ -6,8 +6,8 @@ module.exports = {
     sections: [
         {name: 'Introduction', content: 'docs/introduction.md'},
         {name: 'UI Components', content: 'docs/ui.md', components: function() {
-            return glob.sync(path.resolve(__dirname, 'src/components/**/*.js')).filter(function(module) {
-                return /\/[A-Z]\w*\.js$/.test(module);
+            return glob.sync(path.resolve(__dirname, 'src/components/**/*.jsx')).filter(function(module) {
+                return /\/[A-Z]\w*\.jsx$/.test(module);
             });
         }}
     ],

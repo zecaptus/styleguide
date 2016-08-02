@@ -10,15 +10,18 @@ module.exports = function(config) {
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/components/**/*.js': ['webpack', 'sourcemap']
+      'src/components/**/*.{js,jsx}': ['webpack', 'sourcemap']
     },
 
     webpack: { //kind of a copy of your webpack config
       devtool: 'inline-source-map', //just do inline source maps instead of the default
+      resolve:{
+        extensions : ['', '.js', '.jsx', '.coffee', '.json']
+      },
       module: {
         loaders: [
           {
-            test: /\.js$/,
+            test: /\.jsx?$/,
             loader: 'babel',
             exclude: path.resolve(__dirname, 'node_modules'),
             query: {

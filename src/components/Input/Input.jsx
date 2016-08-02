@@ -14,17 +14,17 @@ class Input extends Component {
         /**
          * Specifies the type of input to display such as "password" or "text".
          */
-        type: PropTypes.string
+        type: PropTypes.string,
     };
 
     static defaultProps = {
         placeholder: null,
         defaultValue: null,
-        type: 'text'
+        type: 'text',
     };
 
     render() {
-        const {placeholder, ...props} = this.props;
+        const { placeholder, ...props } = this.props;
 
         return <TextField hintText={placeholder} {...props} />;
     }

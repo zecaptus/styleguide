@@ -13,6 +13,10 @@ class Checkbox extends Component {
         disabled: false
     };
 
+    componentDidMount() {
+
+    }
+
     render() {
         const {...props} = this.props;
 

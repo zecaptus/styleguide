@@ -5,12 +5,13 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha', 'sinon-chai'],
     files: [
-      'src/components/**/*.spec.js'
+      'src/components/**/*.spec.js',
     ],
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/components/**/*.{js,jsx}': ['webpack', 'sourcemap']
+      'src/components/**/!(*.spec).{js,jsx}': ['webpack', 'sourcemap', 'coverage'],
+      'src/components/**/*.spec.js': ['webpack', 'sourcemap']
     },
 
     webpack: { //kind of a copy of your webpack config
@@ -63,18 +64,16 @@ module.exports = function(config) {
     ],
 
     coverageReporter: {
+      watermarks: {
+        statements: [ 50, 75 ],
+        functions: [ 50, 75 ],
+        branches: [ 50, 75 ],
+        lines: [ 50, 75 ]
+      },
       reporters: [
-        {
-          type: 'text-summary'
-        },
-        {
-          type: 'html',
-          dir: 'coverage'
-        },
-        {
-          type: 'lcov',
-          subdir: 'report-lcov'
-        }
+        { type: 'text' },
+        { type: 'text-summary' },
+        { type: 'lcov' }
       ]
     },
 

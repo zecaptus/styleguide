@@ -23,6 +23,10 @@ class Input extends Component {
         type: 'text',
     };
 
+    componentDidMount() {
+
+    }
+
     render() {
         const { placeholder, ...props } = this.props;
 

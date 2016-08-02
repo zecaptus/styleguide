@@ -2,14 +2,14 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Checkbox from './Checkbox';
+import Input from './Input';
 
-describe('<Checkbox />', () => {
+describe('<Input />', () => {
     const mountWithTheme = (node) => mount(<MuiThemeProvider>{node}</MuiThemeProvider>);
 
     it('calls componentDidMount', () => {
-        sinon.spy(Checkbox.prototype, 'componentDidMount');
-        mountWithTheme(<Checkbox />);
-        expect(Checkbox.prototype.componentDidMount.calledOnce).to.equal(true);
+        sinon.spy(Input.prototype, 'componentDidMount');
+        mountWithTheme(<Input />);
+        expect(Input.prototype.componentDidMount.calledOnce).to.equal(true);
     });
 });

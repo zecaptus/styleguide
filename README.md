@@ -8,3 +8,8 @@ All new react component we have to use for Whataboon
     npm start
     
 Server will start at `http://localhost:3000` 
+    
+Test your components with `npm test`  
+And you can start to create a new component with a good template by typing `npm run createComponent` 
+    
+

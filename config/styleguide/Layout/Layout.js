@@ -1,9 +1,14 @@
 import React, { Component, PropTypes } from 'react';
-import TableOfContents from 'react-styleguidist/src/rsg-components/TableOfContents';
+import TableOfContents from '../TableOfContents';
 import ReactComponent from 'react-styleguidist/src/rsg-components/ReactComponent';
 import CRenderer from '../ReactComponent/Renderer';
 import Markdown from 'react-styleguidist/src/rsg-components/Markdown';
 import Playground from 'react-styleguidist/src/rsg-components/Playground';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
 
 import s from 'react-styleguidist/src/rsg-components/Layout/Layout.css';
 
@@ -169,7 +174,10 @@ const Layout = (Renderer) => class extends Component {
 	}
 
 	renderTableOfContents(components, sections) {
-		return <TableOfContents components={components} sections={sections} />;
+		return <TableOfContents
+					components={components} sections={sections}
+					currentSection={this.state.currentSection}
+					currentComponent={this.state.currentComponent} />;
 	}
 
 	render() {

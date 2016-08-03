@@ -1,33 +1,18 @@
-.header {
-    background-color: #6363AD;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.appBar {
+    position: fixed !important;
+    width: 100%;
+    z-index: 100;
 }
 
-.header h1 {
-    color: #FFF;
-    flex: 1;
-    border: none;
-}
-
-.header h1 a{
-    color: #FFF;
-    text-decoration: none;
-}
-
-.githubLink {
-    height: 24px;
-    padding: 10px;
-}
-
-.githubLink img {
+.appBar img {
+    width: 24px;
     height: 24px;
 }
 
 .sidebar {
     top: 52px;
     bottom: 25px;
+    width: 256px;
 }
 
 .footer {
@@ -39,4 +24,10 @@
     width: calc(100% - 10px);
     padding: 5px;
     text-align: center;
+    z-index: 100;
+}
+
+.wrapper {
+    padding-top: 60px;
+    padding-left: 256px;
 }

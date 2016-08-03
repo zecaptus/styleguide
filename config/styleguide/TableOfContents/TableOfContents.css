@@ -1,0 +1,13 @@
+.root>div {
+    margin-top: 64px;
+    background-color: transparent;
+}
+
+.search {
+    width: calc(100% - 20px) !important;
+    margin: 0 10px;
+}
+
+.selected {
+    background-color: rgba(99, 99, 173, .2) !important;
+}

@@ -12,7 +12,7 @@ injectTapEventPlugin();
 
 import s from 'react-styleguidist/src/rsg-components/Layout/Layout.css';
 
-import isEmpty from 'lodash/isEmpty';
+import isEmpty from 'react-styleguidist/node_modules/lodash/isEmpty';
 
 const Layout = (Renderer) => class extends Component {
 	static propTypes = {
